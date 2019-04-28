@@ -3,86 +3,61 @@
     <div class="ui inverted segment navbar">
       <div class="ui center aligned container">
         <div class="ui large secondary inverted pointing menu compact">
-            <router-link to="/words" exact class="item">
-              <i class="comment outline icon"></i> Words
-            </router-link>
-            <router-link to="/words/new" exact class="item">
-              <i class="plus circle icon"></i> New
-            </router-link>
-            <router-link to="/words/:id" exact class="item">
-              <i class="plus circle icon"></i> Show
-            </router-link>
-            <router-link to="/test" exact class="item">
-              <i class="graduation cap icon"></i> Test
-            </router-link>
+          <router-link to="/words" exact class="item">
+            <i class="comment outline icon"></i> Words
+          </router-link>
+          <router-link to="/words/new" class="item">
+            <i class="plus circle icon"></i> New
+          </router-link>
+          <router-link to="/test" class="item">
+            <i class="graduation cap icon"></i> Test
+          </router-link>
         </div>
       </div>
     </div>
 
     <div class="ui text container">
+      <flash-message class="myflash"></flash-message>
+
       <div class="ui one column grid">
         <div class="column">
           <router-view />
         </div>
       </div>
     </div>
-</div>
+
+  </div>
 </template>
 
 <script>
-  export default {
-    name: 'app'
-  };
+export default {
+  name: 'app'
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
 #app > div.navbar {
   margin-bottom: 1.5em;
 }
-
 .myFlash {
   width: 250px;
   margin: 10px;
   position: absolute;
   top: 50;
   right: 0;
+  color: red;
 }
-
-.input{
+input {
   width: 300px;
 }
-
-div.label{
+div.label {
   width: 120px;
 }
-
-div.input{
+div.input {
   margin-bottom: 10px;
 }
-
-button.ui.button{
+button.ui.button {
   margin-top: 15px;
   display: block;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>

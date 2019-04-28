@@ -25,12 +25,7 @@ export default new Router({
     {
       path: '/words/new',
       name: 'new-word',
-      component: New 
-    },
-    {
-      path: '/word/:id',
-      name: 'show',
-      component: Show
+      component: New
     },
     {
       path: '/words/:id',
@@ -47,6 +42,5 @@ export default new Router({
       name: 'test',
       component: Test
     }
-
   ]
 });
