@@ -18,7 +18,9 @@
         <td width="75" class="center aligned">
           <router-link :to="{ name: 'edit', params: { id: word._id }}">Edit</router-link>
         </td>        
-        <td width="75" class="center aligned">Destroy</td>
+        <td width="75" class="center aligned" @click.prevent="onDestroy(word._id)">
+          <a :href="`/words/${word._id}`">Destroy</a>
+        </td>
       </tr>
     </table>
   </div>
